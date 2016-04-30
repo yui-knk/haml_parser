@@ -4,8 +4,8 @@ module HamlParser
     attr_accessor :lineno
 
     def initialize(message, lineno)
-      super(message)
       @lineno = lineno
+      super("#{message} Line: #{lineno}")
     end
   end
 end

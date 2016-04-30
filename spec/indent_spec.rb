@@ -32,7 +32,7 @@ HAML
   end
 
   it 'raises error if the current indent is shallower than the previous one' do
-    expect { parse(<<HAML) }.to raise_error(HamlParser::IndentTracker::InconsistentIndent) { |e|
+    expect { parse(<<HAML) }.to raise_error(HamlParser::IndentTracker::InconsistentIndent, "") { |e|
 %div
     %div
       %div
